@@ -8,6 +8,7 @@ function Layout() {
     if (location.pathname === '/') return 'Dashboard'
     if (location.pathname.startsWith('/events/')) return 'Event Details'
     if (location.pathname === '/events') return 'Events'
+        if (location.pathname === '/TermsOfServices') return 'Terms Of Services'
     return 'Page Not Found'
   }
 
@@ -23,7 +24,7 @@ function Layout() {
       <div className="logo">
              <Link to="/" className="link-no-underline">
 
- <img src="/logo.svg" alt="Dashboard" />
+       <img src="/logo.svg" alt="Dashboard" />
         Ventixe
         </Link>
         </div>
@@ -48,7 +49,13 @@ function Layout() {
           </header>
                  <Outlet />
                 <footer className='footer'>
-          <p>&copy; 2025 My Event App</p> <p>Privacy Policy</p>  <p>Term and conditions</p>   <p>Contact</p>  
+          <p>&copy; 2025 My Event App</p> <p>Privacy Policy</p>  
+          
+            <Link to="/tos" className="link-no-underline">
+
+           <p>Term and conditions</p> 
+            </Link>
+            <p>Contact</p>  
       </footer>
       </main>
  

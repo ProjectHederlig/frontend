@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import EventCard from '../components/EventCard'
 
 const Events = () => {
@@ -15,20 +15,14 @@ const Events = () => {
 
   useEffect(() => {
     getEvents()
-  }, [])
-
+  }, [])  
   return (
     <div className='events-container'>
-
-      {
-        events.map(event => (
+      {events.map(event => (
           <EventCard key={event.id} event={event} />
-        ))
-      }
+        ))}
     </div>
-
     )
 }
-
 
 export default Events

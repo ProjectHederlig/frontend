@@ -18,48 +18,45 @@ function Layout() {
 
 
   return (
-    <div>
-  <div className="projects-wrapper">
-      <aside className="sidebar">
-      <div className="logo">
-             <Link to="/" className="link-no-underline">
-
-       <img src="/logo.svg" alt="Dashboard" />
-        Ventixe
-        </Link>
+    <div className="layout-wrapper">
+      <aside className="layout-aside">
+        <div className="aside-logo">
+          <Link to="/"><img src="/logo.svg" alt="Dashboard"></img>
+            <span>Ventixe</span>
+          </Link>
         </div>
-        
-      <nav className="nav">
-        <NavLink to="/" className="nav-link">
-        <img src="/dashboard.svg" alt="Dashboard" />
-        <i className="fa-solid fa-ticket-simple"></i>
-        Dashboard
-        </NavLink>
-        <NavLink to="/events" className="nav-link">
-        <img src="/event.svg" alt="Events" />
-        Events
-        </NavLink>
-      </nav>     
-    </aside>
+        <nav className="aside-nav">
+          <NavLink to="/" className="aside-link">
+            <img src="/dashboard.svg" alt="Dashboard" />
+            Dashboard
+          </NavLink>
+          <NavLink to="/events" className="aside-link">
+            <img src="/event.svg" alt="Events" />
+            Events
+          </NavLink>
+        </nav>
+      </aside>
 
-      <main>
-        <header>
+      <div className="layout-content">
+        <header className="layout-header">
           <h1>{pageTitle}</h1>
-          
-          </header>
-                 <Outlet />
-                <footer className='footer'>
-          <p>&copy; 2025 My Event App</p> <p>Privacy Policy</p>  
-          
-            <Link to="/termsofservices" className="link-no-underline">
+        </header>
 
-           <p>Term and conditions</p> 
-            </Link>
+        <main className="layout-main">
+          <Outlet />
+        </main>
+      <footer className='footer'>
+          <div className='footer-copyright'>
+            <p>&copy; 2025 My Event App</p> 
+          </div>
+          <div className='footer-terms'>
+            <p>Privacy Policy</p> 
+            <Link to="/termsofservices">
+            <p>Term and conditions</p>
+            </Link>   
             <p>Contact</p>  
+          </div>
       </footer>
-      </main>
- 
-
     </div>
     </div>
   )

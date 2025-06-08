@@ -1,5 +1,3 @@
-
-
 function TosCard({ tos }) {
   return (
     <div className="TosCard">

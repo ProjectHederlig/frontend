@@ -18,8 +18,8 @@ const Events = () => {
   }, [])
 
   return (
-    <div>
-      <h2>Events</h2>
+    <div className='events-container'>
+
       {
         events.map(event => (
           <EventCard key={event.id} event={event} />

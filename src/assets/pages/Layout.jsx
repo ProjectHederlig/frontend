@@ -8,7 +8,7 @@ function Layout() {
     if (location.pathname === '/') return 'Dashboard'
     if (location.pathname.startsWith('/events/')) return 'Event Details'
     if (location.pathname === '/events') return 'Events'
-        if (location.pathname === '/TermsOfServices') return 'Terms Of Services'
+        if (location.pathname === '/termsofservices') return 'Terms Of Services'
     return 'Page Not Found'
   }
 
@@ -51,7 +51,7 @@ function Layout() {
                 <footer className='footer'>
           <p>&copy; 2025 My Event App</p> <p>Privacy Policy</p>  
           
-            <Link to="/tos" className="link-no-underline">
+            <Link to="/termsofservices" className="link-no-underline">
 
            <p>Term and conditions</p> 
             </Link>

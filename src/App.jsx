@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom'
 import Dashboard from './assets/pages/Dashboard'
 import EventDetails from './assets/components/EventDetails'
 import Events from './assets/pages/Events'
@@ -13,7 +13,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/TermsOfServices" element={<TermsOfServices/>} />
+        <Route path="/termsofservices" element={<TermsOfServices/>} />
         <Route path="events/:id" element={<EventDetails />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Route>

@@ -6,12 +6,12 @@ function TosCard({ tos }) {
 
         <div className="tos-main">
             
-            <p className="tos-description">{tos.description}</p>
+            <h3 className="tos-description">{tos.description}</h3>
         </div>
         <div className="tos-details">
-            <p>{tos.firstText}</p>
-             <p>{tos.secondText}</p>
-              <p>{tos.thirdText}</p>
+          <p> <li> {tos.firstText}</li></p>
+           <p> <li> {tos.secondText}</li></p>
+           <p>  <li> {tos.thirdText}</li></p>
         </div>  
   
     </div>
